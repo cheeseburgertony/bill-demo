@@ -104,6 +104,40 @@
       "money": 300,
       "date": "2024-07-09T14:48:03.800Z",
       "useFor": "salary"
+    },
+    {
+      "id": "2964",
+      "type": "pay",
+      "money": -10,
+      "date": "2024-07-09T14:55:44.092Z",
+      "useFor": "food"
+    },
+    {
+      "id": "151a",
+      "type": "pay",
+      "money": -100,
+      "useFor": "drinks"
+    },
+    {
+      "id": "3c61",
+      "type": "pay",
+      "money": -100,
+      "date": "2024-07-08T16:00:00.000Z",
+      "useFor": "drinks"
+    },
+    {
+      "id": "12a6",
+      "type": "pay",
+      "money": -10,
+      "date": "2024-07-09T15:08:12.859Z",
+      "useFor": "food"
+    },
+    {
+      "id": "dc3e",
+      "type": "pay",
+      "money": -10,
+      "date": "2024-07-03T16:00:00.000Z",
+      "useFor": "dessert"
     }
   ]
 }

@@ -5,6 +5,7 @@ import classNames from 'classnames'
 import dayjs from 'dayjs'
 import _ from 'lodash'
 import { useSelector } from 'react-redux'
+import DailyBill from './components/DailyBill'
 
 const Month = () => {
   // 控制弹框的打开和关闭
@@ -52,6 +53,17 @@ const Month = () => {
     setCurrentMonthList(monthGroup[formatDate])
   }
 
+  // 对当前月数据列表进行日的分组
+  const dayGroup = useMemo(() => {
+    // return出去计算之后的值
+    const groupDay = _.groupBy(currentMonthList, (item) => dayjs(item.date).format('YYYY-MM-DD'))
+    const keys = Object.keys(groupDay)
+    return {
+      groupDay,
+      keys
+    }
+  }, [currentMonthList])
+
   return (
     <div className="monthlyBill">
       <NavBar className="nav" backArrow={false}>
@@ -92,6 +104,8 @@ const Month = () => {
             onConfirm={onConfirm}
           />
         </div>
+        {/* 单日列表统计 */}
+        {dayGroup.keys.map(item => <DailyBill key={item} date={item} billList={dayGroup.groupDay[item]} />)}
       </div>
     </div >
   )

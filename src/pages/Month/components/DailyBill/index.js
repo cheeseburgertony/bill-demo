@@ -45,14 +45,14 @@ const DailyBill = ({ date, billList }) => {
       <div className="billList" style={{ display: visible ? 'block' : 'none' }}>
         {billList.map(item => {
           return (
-            <div className="bill" key={item.id}>
+            <div className="bill" key={item.id || item}>
               {/* 图标 */}
               <Icon type={item.useFor} />
               <div className="detail">
                 <div className="billType">{billTypeToName[item.useFor]}</div>
               </div>
               <div className={classNames('money', item.type)}>
-                {item.money.toFixed(2)}
+                {item.money?.toFixed(2)}
               </div>
             </div>
           )

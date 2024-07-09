@@ -138,6 +138,139 @@
       "money": -10,
       "date": "2024-07-03T16:00:00.000Z",
       "useFor": "dessert"
+    },
+    {
+      "id": "4dcf",
+      "type": "pay",
+      "money": -10,
+      "date": "2024-07-09T15:36:25.077Z",
+      "useFor": "food"
+    },
+    {
+      "id": "a1d2",
+      "type": "pay",
+      "money": -10,
+      "date": "2024-07-09T15:40:17.604Z",
+      "useFor": "food"
+    },
+    {
+      "id": "6b90",
+      "type": "pay",
+      "money": -10,
+      "date": "2024-07-09T15:40:45.902Z",
+      "useFor": "food"
+    },
+    {
+      "id": "a9bc",
+      "type": "pay",
+      "money": -20,
+      "date": "2024-07-09T15:41:27.626Z",
+      "useFor": "bodybuilding"
+    },
+    {
+      "id": "483c",
+      "type": "pay",
+      "money": -10,
+      "date": "2024-07-09T15:43:21.912Z",
+      "useFor": "dessert"
+    },
+    {
+      "id": "b575",
+      "type": "pay",
+      "money": -10,
+      "date": "2024-07-09T15:44:02.909Z",
+      "useFor": "food"
+    },
+    {
+      "id": "a4f2",
+      "type": "pay",
+      "money": -10,
+      "date": "2024-07-09T15:46:44.355Z",
+      "useFor": "longdistance"
+    },
+    {
+      "id": "54db",
+      "type": "pay",
+      "money": -10,
+      "date": "2024-07-06T16:00:00.000Z",
+      "useFor": "taxi"
+    },
+    {
+      "id": "fbca",
+      "type": "pay",
+      "money": -10,
+      "date": "2024-07-09T15:57:41.199Z",
+      "useFor": "bodybuilding"
+    },
+    {
+      "id": "7f1f",
+      "type": "pay",
+      "money": -10,
+      "date": "2024-07-09T15:57:51.381Z",
+      "useFor": "drinks"
+    },
+    {
+      "id": "3bd6",
+      "type": "pay",
+      "money": -10,
+      "date": "2024-07-09T15:58:30.647Z",
+      "useFor": "taxi"
+    },
+    {
+      "id": "c6ac",
+      "type": "pay",
+      "money": -10,
+      "date": "2024-07-08T16:00:00.000Z",
+      "useFor": "drinks"
+    },
+    {
+      "id": "1682",
+      "type": "pay",
+      "money": -10,
+      "date": "2024-07-09T16:01:34.258Z",
+      "useFor": "food"
+    },
+    {
+      "id": "a02e",
+      "type": "pay",
+      "money": -20,
+      "date": "2024-07-09T16:01:48.196Z",
+      "useFor": "food"
+    },
+    {
+      "id": "ead0",
+      "type": "pay",
+      "money": -110,
+      "date": "2024-07-05T16:00:00.000Z",
+      "useFor": "promote"
+    },
+    {
+      "id": "e2b5",
+      "type": "pay",
+      "money": -10,
+      "date": "2024-07-09T16:03:14.537Z",
+      "useFor": "food"
+    },
+    {
+      "id": "2cd1",
+      "type": "pay",
+      "money": -10,
+      "date": "2024-07-09T16:03:34.657Z",
+      "useFor": "drinks"
+    },
+    {
+      "id": "1fd8",
+      "type": "pay",
+      "money": -10,
+      "date": "2024-07-05T16:00:00.000Z",
+      "useFor": "bodybuilding"
+    },
+    {
+      "id": "079f",
+      "type": "income",
+      "money": 10000,
+      "date": "2024-07-09T16:04:10.044Z",
+      "useFor": "salary"
     }
   ]
 }

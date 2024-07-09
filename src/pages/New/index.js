@@ -39,6 +39,10 @@ const New = () => {
       useFor: useFor
     }
     dispatch(addBillList(data))
+    // 提交表单后返回上一页
+    setTimeout(() => {
+      navigate(-1)
+    }, 200)
   }
 
   return (

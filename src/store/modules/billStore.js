@@ -11,12 +11,15 @@ const billStore = createSlice({
   reducers: {
     setBillList(state, action) {
       state.billList = action.payload
+    },
+    addBill(state, action) {
+      state.billList = action.payload
     }
   }
 })
 
 // 结构出actionCreator
-const { setBillList } = billStore.actions
+const { setBillList, addBill } = billStore.actions
 
 // 异步方法
 const getBillList = () => {
@@ -26,7 +29,15 @@ const getBillList = () => {
     dispatch(setBillList(res.data))
   }
 }
-export { getBillList }
+
+const addBillList = (data) => {
+  return async (dispatch) => {
+    const res = await axios.post('http://localhost:8888/ka', data)
+    dispatch(addBill(res.data))
+  }
+}
+
+export { getBillList, addBillList }
 
 // 导出reducer
 const reducer = billStore.reducer

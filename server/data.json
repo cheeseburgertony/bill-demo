@@ -90,6 +90,20 @@
       "date": "2024-07-09T11:14:56.036Z",
       "useFor": "food",
       "id": 19
+    },
+    {
+      "id": "137b",
+      "type": "pay",
+      "money": -10,
+      "date": "2024-07-09T14:47:26.158Z",
+      "useFor": "drinks"
+    },
+    {
+      "id": "9254",
+      "type": "income",
+      "money": 300,
+      "date": "2024-07-09T14:48:03.800Z",
+      "useFor": "salary"
     }
   ]
 }

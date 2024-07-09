@@ -5,12 +5,33 @@ import classNames from 'classnames'
 import { billListData } from '@/contants'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { addBillList } from '@/store/modules/billStore'
 
 const New = () => {
   const navigate = useNavigate()
 
   // 支出和收入状态
   const [billType, setBillType] = useState('pay')
+  const [money, setMoney] = useState(0)
+  const [useFor, setUseFor] = useState('')
+
+  const changeMoney = (value) => {
+    setMoney(value)
+  }
+
+  // 提交表单保存
+  const dispatch = useDispatch()
+  const saveBill = () => {
+    // 收集表单
+    const data = {
+      type: billType,
+      money: billType === 'pay' ? -money : +money,
+      date: new Date(),
+      useFor: useFor
+    }
+    dispatch(addBillList(data))
+  }
 
   return (
     <div className="keepAccounts">
@@ -52,6 +73,8 @@ const New = () => {
                 className="input"
                 placeholder="0.00"
                 type="number"
+                value={money}
+                onChange={changeMoney}
               />
               <span className="iconYuan">¥</span>
             </div>
@@ -73,7 +96,7 @@ const New = () => {
                         ''
                       )}
                       key={item.type}
-
+                      onClick={() => setUseFor(item.type)}
                     >
                       <div className="icon">
                         <Icon type={item.type} />
@@ -89,7 +112,7 @@ const New = () => {
       </div>
 
       <div className="btns">
-        <Button className="btn save">
+        <Button className="btn save" onClick={saveBill}>
           保 存
         </Button>
       </div>

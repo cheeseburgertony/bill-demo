@@ -1,6 +1,6 @@
 import { NavBar, DatePicker } from 'antd-mobile'
 import './index.scss'
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import classNames from 'classnames'
 import dayjs from 'dayjs'
 import _ from 'lodash'
@@ -11,7 +11,7 @@ const Month = () => {
   const [dataVisible, setDataVisible] = useState(false)
 
   // 时间显示
-  const [currentDate, setCurrentDate] = useState(() => dayjs(new Date()).format('YYYY-MM'))
+  const [currentDate, setCurrentDate] = useState(() => dayjs(new Date()).format('YYYY | MM'))
 
   const billList = useSelector(state => state.bill.billList)
 
@@ -19,7 +19,7 @@ const Month = () => {
   // 计算使用到useMemo
   const monthGroup = useMemo(() => {
     // return出去计算之后的值
-    return _.groupBy(billList, (item) => dayjs(item.date).format('YYYY-MM'))
+    return _.groupBy(billList, (item) => dayjs(item.date).format('YYYY | MM'))
   }, [billList])
 
   // 当前选择时间的数据
@@ -35,10 +35,18 @@ const Month = () => {
     }
   }, [currentMonthList])
 
+  // 初始化的时候显示当前月的统计数据
+  useEffect(() => {
+    const nowDate = dayjs().format('YYYY | MM')
+    if (monthGroup[nowDate]) {
+      setCurrentMonthList(monthGroup[nowDate])
+    }
+  }, [monthGroup])
+
   // 时间选择器点击确认
   const onConfirm = (date) => {
     setDataVisible(false)
-    const formatDate = dayjs(date).format('YYYY-MM')
+    const formatDate = dayjs(date).format('YYYY | MM')
     setCurrentDate(formatDate)
     // 根据当前选择的时间匹配相对应的数据
     setCurrentMonthList(monthGroup[formatDate])
